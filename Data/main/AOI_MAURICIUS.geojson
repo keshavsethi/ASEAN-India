@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "AOI_MAURICIUS",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "AOI_MAURICIUS", "description": null, "tessellate": 1 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 57.737439740504243, -20.566177081881879 ], [ 58.380723922281533, -20.44711799865517 ], [ 58.306019463753628, -20.02795325624416 ], [ 57.638203761376133, -20.154827082428088 ], [ 57.688288773194017, -20.360272089397451 ], [ 57.708333926267898, -20.461053938652029 ], [ 57.737439740504243, -20.566177081881879 ] ] ] } }
+]
+}
