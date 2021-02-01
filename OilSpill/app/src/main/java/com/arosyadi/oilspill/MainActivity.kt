@@ -2,6 +2,9 @@ package com.arosyadi.oilspill
 
 import android.app.DownloadManager
 import android.app.DownloadManager.*
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -15,7 +18,10 @@ import android.view.View
 import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContentProviderCompat.requireContext
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,86 +32,120 @@ class MainActivity : AppCompatActivity() {
     private val FILECHOOSER_RESULTCODE = 1
     val REQUEST_SELECT_FILE = 100
 
+    var id = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        with(wv_oil) {
-            if (savedInstanceState == null) {
-                savedInstanceState?.let { restoreState(it) }
-                loadUrl("https://share.streamlit.io/keshavsethi/streamlit/main.py")
-                settings.javaScriptEnabled = true
-                settings.builtInZoomControls = true
-                settings.displayZoomControls = true
-                settings.allowFileAccess = true
-                settings.allowFileAccessFromFileURLs = true
+        val reference = FirebaseDatabase.getInstance("https://oilspill-8c6be-default-rtdb.firebaseio.com/").reference.child("Vessel")
 
-                wv_oil.setWebChromeClient(object:WebChromeClient() {
-                    override fun onShowFileChooser(webView:WebView, filePathCallback:ValueCallback<Array<Uri>>, fileChooserParams:FileChooserParams):Boolean {
-                        var mFilePathCallback = filePathCallback
-                        val intent = Intent(Intent.ACTION_GET_CONTENT)
-                        intent.setType("*/*")
-                        val PICKFILE_REQUEST_CODE = 100
-                        startActivityForResult(intent, PICKFILE_REQUEST_CODE)
-                        return true
-                    }
-                })
-
-                fun onActivityResult(requestCode: Int, resultCode: Int,
-                                     intent: Intent,
-                                     mFilePathCallback: Any): Boolean {
-                    var PICKFILE_REQUEST_CODE = null
-                    if (requestCode == PICKFILE_REQUEST_CODE)
-                    {
-                        val result = if (intent == null || resultCode != RESULT_OK)
-                            null
-                        else
-                            intent.getData()
-                        val resultsArray = arrayOfNulls<Uri>(1)
-                        resultsArray[0] = result
-                        mFilePathCallback.onReceiveValue(resultsArray)
-
-                    }
-                    return true
-                }
-
-
-
-                wv_oil.setDownloadListener(object : DownloadListener {
-                    override fun onDownloadStart(url: String, userAgent: String,
-                                                 contentDisposition: String, mimetype: String,
-                                                 contentLength: Long) {
-                        val request = Request(Uri.parse(url))
-                        request.allowScanningByMediaScanner()
-
-                        request.setAllowedNetworkTypes(Request.NETWORK_WIFI or Request.NETWORK_MOBILE)
-                        request.setNotificationVisibility(Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED) //Notify client once download is completed!
-                        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, mimetype)
-                        val webview = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-                        webview.enqueue(request)
-                        Toast.makeText(getApplicationContext(), "Downloading File", Toast.LENGTH_LONG).show()
-                    }
-                })
-
-                class webviewclient : WebViewClient() {
-                    override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-                        wv_oil.loadUrl("http://google.com")
-                        return true
-                    }
-                }
-//                searchbtn.setOnClickListener({ (webview.loadUrl("https://www.google.com")) })
-//
-//                btn1.setOnClickListener({ (webview.goBack()) })
-//
-//                btn3.setOnClickListener({ (webview.goForward()) })
+        reference.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
             }
-        }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    id = dataSnapshot.childrenCount.toInt()
+                }
+            }
+
+        })
+
+        reference.addChildEventListener(object: ChildEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onChildMoved(p0: DataSnapshot, p1: String?) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onChildChanged(p0: DataSnapshot, p1: String?) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onChildAdded(p0: DataSnapshot, p1: String?) {
+                notification()
+            }
+
+            override fun onChildRemoved(p0: DataSnapshot) {
+                TODO("Not yet implemented")
+            }
+        })
+
+//        with(wv_oil) {
+//            if (savedInstanceState == null) {
+//                savedInstanceState?.let { restoreState(it) }
+//                loadUrl("https://share.streamlit.io/keshavsethi/streamlit/main.py")
+//                settings.javaScriptEnabled = true
+//                settings.builtInZoomControls = true
+//                settings.displayZoomControls = true
+//                settings.allowFileAccess = true
+//                settings.allowFileAccessFromFileURLs = true
+//
+//                wv_oil.setWebChromeClient(object:WebChromeClient() {
+//                    override fun onShowFileChooser(webView:WebView, filePathCallback:ValueCallback<Array<Uri>>, fileChooserParams:FileChooserParams):Boolean {
+//                        var mFilePathCallback = filePathCallback
+//                        val intent = Intent(Intent.ACTION_GET_CONTENT)
+//                        intent.setType("*/*")
+//                        val PICKFILE_REQUEST_CODE = 100
+//                        startActivityForResult(intent, PICKFILE_REQUEST_CODE)
+//                        return true
+//                    }
+//                })
+//
+//                fun onActivityResult(requestCode: Int, resultCode: Int,
+//                                     intent: Intent,
+//                                     mFilePathCallback: Any): Boolean {
+//                    var PICKFILE_REQUEST_CODE = null
+//                    if (requestCode == PICKFILE_REQUEST_CODE)
+//                    {
+//                        val result = if (intent == null || resultCode != RESULT_OK)
+//                            null
+//                        else
+//                            intent.getData()
+//                        val resultsArray = arrayOfNulls<Uri>(1)
+//                        resultsArray[0] = result
+//                        mFilePathCallback.onReceiveValue(resultsArray)
+//
+//                    }
+//                    return true
+//                }
+//
+//
+//
+//                wv_oil.setDownloadListener(object : DownloadListener {
+//                    override fun onDownloadStart(url: String, userAgent: String,
+//                                                 contentDisposition: String, mimetype: String,
+//                                                 contentLength: Long) {
+//                        val request = Request(Uri.parse(url))
+//                        request.allowScanningByMediaScanner()
+//
+//                        request.setAllowedNetworkTypes(Request.NETWORK_WIFI or Request.NETWORK_MOBILE)
+//                        request.setNotificationVisibility(Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED) //Notify client once download is completed!
+//                        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, mimetype)
+//                        val webview = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+//                        webview.enqueue(request)
+//                        Toast.makeText(getApplicationContext(), "Downloading File", Toast.LENGTH_LONG).show()
+//                    }
+//                })
+//
+//                class webviewclient : WebViewClient() {
+//                    override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+//                        wv_oil.loadUrl("http://google.com")
+//                        return true
+//                    }
+//                }
+////                searchbtn.setOnClickListener({ (webview.loadUrl("https://www.google.com")) })
+////
+////                btn1.setOnClickListener({ (webview.goBack()) })
+////
+////                btn3.setOnClickListener({ (webview.goForward()) })
+//            }
+//        }
 //        settingWebview()
-    }
-
-    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
-        return super.onCreateView(name, context, attrs)
-
     }
 
 //    fun settingWebview() {
@@ -199,4 +239,23 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun Any.onReceiveValue(resultsArray: Array<Uri?>) {}
+
+    private fun notification() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel("n", "n", NotificationManager.IMPORTANCE_DEFAULT)
+            val manager = getSystemService(NotificationManager::class.java)
+
+            manager.createNotificationChannel(channel)
+
+        }
+
+        val builder = NotificationCompat.Builder(this, "n")
+            .setContentText("Oil Spill")
+            .setSmallIcon(R.drawable.ic_baseline_notifications_24)
+            .setAutoCancel(true)
+            .setContentText("There is an anomaly for some vessels, check it immediately!")
+
+        val managerCompat = NotificationManagerCompat.from(this)
+        managerCompat.notify(999, builder.build())
+    }
 }
