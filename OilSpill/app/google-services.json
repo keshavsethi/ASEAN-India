@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1099216020987",
+    "project_id": "oilspill-8c6be",
+    "storage_bucket": "oilspill-8c6be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099216020987:android:b1cd22865a68c4ffa3d75e",
+        "android_client_info": {
+          "package_name": "com.arosyadi.oilspill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1099216020987-2ppdnpqu8n068upsj856apbllus5nhj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUkjYxFVdflLV6oIlcxC6vurYm0DkGZTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1099216020987-2ppdnpqu8n068upsj856apbllus5nhj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
