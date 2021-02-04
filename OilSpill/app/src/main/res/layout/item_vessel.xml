@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAsh"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="4dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_maps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_map"
+            android:text="View On Map"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:padding="8dp"
+            android:backgroundTint="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_timestamp"
+            app:layout_constraintTop_toTopOf="@+id/tv_vessel" />
+
+        <TextView
+            android:id="@+id/tv_vessel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="Vessel"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Timestamp"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_vessel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vessel" />
+
+        <TextView
+            android:id="@+id/tv_mmsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="0198240918"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_vessel"
+            app:layout_constraintTop_toBottomOf="@+id/tv_timestamp" />
+
+        <TextView
+            android:id="@+id/tv_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="Latitude"
+            app:drawableLeftCompat="@drawable/ic_compass"
+            app:layout_constraintStart_toStartOf="@+id/tv_mmsi"
+            app:layout_constraintTop_toBottomOf="@id/tv_mmsi" />
+
+        <TextView
+            android:id="@+id/tv_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:layout_marginStart="16dp"
+            android:text="Longitude"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_lat"
+            app:layout_constraintStart_toEndOf="@+id/tv_lat"
+            app:layout_constraintTop_toTopOf="@+id/tv_lat" />
+
+        <TextView
+            android:id="@+id/tv_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:text="Speed"
+            app:drawableLeftCompat="@drawable/ic_download_speed"
+            app:layout_constraintStart_toStartOf="@+id/tv_lat"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lat" />
+
+        <TextView
+            android:id="@+id/tv_rot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="Rot"
+            app:drawableLeftCompat="@drawable/ic_steering_wheel"
+            app:layout_constraintStart_toEndOf="@+id/tv_speed"
+            app:layout_constraintTop_toTopOf="@+id/tv_speed" />
+
+        <TextView
+            android:id="@+id/tv_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="Course"
+            app:drawableLeftCompat="@drawable/ic_angle"
+            app:layout_constraintStart_toEndOf="@+id/tv_rot"
+            app:layout_constraintTop_toTopOf="@+id/tv_rot" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rot" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.White" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:actionMenuTextColor">@android:color/black</item>
+    </style>
+
+    <style name="rounded_button_big" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@drawable/rounded_background</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="rounded_button_big_outline" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">#4a4a4a</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@drawable/rounded_background_outline</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog_fragment</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="semiBoldText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="regularMediumText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="authButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginRight">22dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semibold</item>
+    </style>
+
+    <style name="editTextUpdateProfile">
+        <item name="android:paddingBottom">29dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:textColorHint">@color/colorBrownGrey</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="MyRadioButtonStyle">
+        <item name="android:textColor">@drawable/my_compound_button_color_selector</item>
+        <item name="buttonTint">@drawable/my_compound_button_color_selector</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+    </style>
+
+    <style name="editTextMatchingSetting">
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:textColorHint">@color/colorBrownGrey</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textColor">@color/colorBrownGrey</item>
+    </style>
+
+
+</resources>

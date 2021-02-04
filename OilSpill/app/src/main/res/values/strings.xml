@@ -1,3 +1,502 @@
 <resources>
     <string name="app_name">OilSpill</string>
+    <string name="mapbox_access_token">pk.eyJ1Ijoic3VwZXJyb2NreSIsImEiOiJja2tvcW1qOHcwc2R6MnBtYWJiOTVubGRpIn0.4QeyK_AsvVNScz43xYdcbw</string>
+
+    <!--Default style names-->
+    <string name="menu_map_style_streets">Streets</string>
+    <string name="menu_map_style_dark">Dark</string>
+    <string name="menu_map_style_light">Light</string>
+    <string name="menu_map_style_outdoors">Outdoors</string>
+    <string name="menu_map_style_satellite">Satellite</string>
+    <string name="menu_map_style_satellite_streets">Satellite streets</string>
+
+    <!--Move map instruction for toast-->
+    <string name="move_map_instruction">Move map to place\nmarker at desired location</string>
+
+    <!--Zoom in and out map instruction for toast-->
+    <string name="zoom_map_in_and_out_instruction">Zoom in and out to see cluster numbers change</string>
+
+    <!--Tap on feature box instruction-->
+    <string name="tap_on_feature_box_instruction">Tap on bounding box</string>
+
+    <!--Fragment below textview in support fragment activity-->
+    <string name="fragment_in_card_below">Map fragment container in card below</string>
+
+    <!--Offline manager button text-->
+    <string name="download_button_text">Download</string>
+    <string name="list_button_text">List</string>
+
+    <!--Basic user location permission toasts-->
+    <string name="user_location_permission_explanation">This app needs location permissions in order to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+
+    <!--Location Component on Fragment below textview in test activity-->
+    <string name="location_component_fragment_text">User\'s current location on a map fragment</string>
+
+    <!-- Location change listening -->
+    <string name="new_location">New lat: %1$s New longitude: %2$s</string>
+
+    <!-- Settings dialog -->
+    <string name="settings_dialog_title">Settings</string>
+    <string name="settings_dialog_positive_button_text">Save</string>
+    <string name="settings_status_toast_settings_saved">Settings saved</string>
+    <string name="settings_dialog_negative_button_text">Cancel</string>
+    <string name="analytics_opt_out_textview">Opt out of analytics tracking</string>
+    <string name="login_or_signup_account_switch_text">Always show account login/creation screen</string>
+    <string name="log_out_of_account_button">Log out of Mapbox account</string>
+    <string name="log_out_toast_confirm">Successfully logged out</string>
+
+    <!--Basic offline map-->
+    <string name="basic_offline_deleted_toast">Yosemite offline map deleted</string>
+
+    <!--Marker strings for MarkerViewPluginActivity activity-->
+
+    <!--Marker strings for DrawMarkerActivity activity-->
+    <string name="draw_marker_options_title">Hello World!</string>
+    <string name="draw_marker_options_snippet">Welcome to my marker.</string>
+
+    <!--Marker strings for DirectionsActivity activity-->
+    <string name="directions_activity_toast_message">Route is %1$f meters long.</string>
+
+    <!--Marker strings for DirectionsActivity activity-->
+    <string name="snaking_directions_activity_error">Direction route retrieval failed</string>
+
+    <!--Strings for OfflineManager activity-->
+    <string name="dialog_title">Name new region</string>
+    <string name="dialog_message">Downloads the map region you currently are viewing</string>
+    <string name="dialog_positive_button">Download</string>
+    <string name="dialog_negative_button">Cancel</string>
+    <string name="dialog_toast">Region name cannot be empty.</string>
+    <string name="end_progress_success">Region downloaded successfully.</string>
+    <string name="toast_no_regions_yet">You have no regions yet.</string>
+    <string name="toast_region_deleted">Region deleted</string>
+    <string name="navigate_positive_button">Navigate to</string>
+    <string name="navigate_neutral_button_title">Delete</string>
+    <string name="navigate_negative_button_title">Cancel</string>
+    <string name="navigate_title">List</string>
+    <string name="region_name">Region %1$d</string>
+    <string name="set_region_name_hint">Enter name</string>
+
+    <!--SimpleOfflineMapActivity activity-->
+    <string name="simple_offline_end_progress_success">Region downloaded successfully.</string>
+
+    <!--FeatureCountActivity activity-->
+    <string name="feature_count_snackbar_feature_size">%1$d features in box</string>
+
+    <!--QueryFeatureActivity activity-->
+    <string name="query_feature_marker_title">Properties:</string>
+    <string name="query_feature_no_properties_found">No feature properties found</string>
+
+    <!--LocationPickerActivity activity-->
+    <string name="location_picker_select_location_button_cancel">Cancel</string>
+    <string name="location_picker_select_location_button_select">Select a location</string>
+    <string name="location_picker_dropped_marker_snippet_no_results">No results</string>
+    <string name="location_picker_place_name_result">Place name: %1$s</string>
+
+    <!--PulsingLayerOpacityColorActivity activity-->
+    <string name="fab_title_hotels">Hotels</string>
+    <string name="fab_title_parks">Parks</string>
+    <string name="fab_title_attractions">Attractions</string>
+
+    <!--OffRouteActivity activity-->
+
+    <!--LanguageSwitchActivity activity-->
+    <string name="language_switch_options_menu_language_english">English</string>
+    <string name="language_switch_options_menu_language_french">French</string>
+    <string name="language_switch_options_menu_language_russian">Russian</string>
+    <string name="language_switch_options_menu_language_german">German</string>
+    <string name="language_switch_options_menu_language_spanish">Spanish</string>
+    <string name="language_switch_options_menu_language_italian">Italian</string>
+    <string name="language_switch_options_menu_language_vietnamese">Vietnamese</string>
+    <string name="language_switch_options_menu_language_korean">Korean</string>
+    <string name="language_switch_options_menu_language_japanese">Japanese</string>
+    <string name="language_switch_options_menu_language_simplified_chinese">Simplified Chinese</string>
+    <string name="language_switch_options_menu_language_traditional_chinese">Traditional Chinese</string>
+
+    <!--LanguageSwitchActivity activity-->
+
+    <!--Tap on map instruction for toast-->
+    <string name="tap_on_map_instruction">Tap anywhere on the map</string>
+    <string name="tap_on_map_for_notification">Tap on map to get a notification with map image</string>
+
+    <string name="san_francisco">San Francisco</string>
+    <string name="los_angeles">Los Angeles</string>
+    <string name="seattle">Seattle</string>
+    <string name="new_orleans">New Orleans</string>
+    <string name="chicago">Chicago</string>
+    <string name="philadelphia">Philadelphia</string>
+    <string name="new_york">New York</string>
+    <string name="atlanta">Atlanta</string>
+    <string name="portland">Portland</string>
+    <string name="denver">Denver</string>
+    <string name="minneapolis">Minneapolis</string>
+    <string name="miami">Miami</string>
+    <string name="extrusions_category">3D Extrusions</string>
+    <string name="plugins_category">Plugins</string>
+
+    <!--Landing activity-->
+    <string name="tv_create_account_button">Create account</string>
+    <string name="tv_sign_in_to_account_button">Sign in</string>
+    <string name="landing_cta_tv_text">Create or sign in to your Mapbox account to view the latest Mapbox demos</string>
+    <string name="skip_for_now_bottom_button">Skip for now</string>
+    <string name="do_not_show_again_button_text">Don\'t ask again</string>
+    <string name="whoops_error_dialog_title">Whoops!</string>
+    <string name="whoops_error_dialog_message">Looks like something went wrong with the log in process! Please try clearing your browser\'s cache/cookies and then sign back in.</string>
+    <string name="whoops_error_dialog_ok_positive_button">Ok</string>
+
+    <!--Loading activity-->
+    <string name="loading_textview">Loading&#8230;</string>
+
+    <!--Space station toast-->
+    <string name="space_station_toast">Zoom in closely on the space station\nto see it moving across the map</string>
+
+    <!-- Extrusion light activity menu -->
+    <string name="change_anchor">Change anchor</string>
+    <string name="change_intensity">Change intensity</string>
+
+    <string name="no_picture_in_picture_support">This device\'s Android version does not\nsupport picture-in-picture mode</string>
+    <string name="retrieval_error_dialog_title">Whoops!</string>
+    <string name="retrieval_error_dialog_message">Looks like something went wrong with the log in process! Please try clearing your browser\'s cache/cookies and then sign back in.</string>
+    <string name="retrieval_error_dialog_ok_button">Ok</string>
+
+    <!-- Share app intent -->
+    <string name="share_app_subject">Mapbox demo app for Android</string>
+    <string name="share_app_text">Hey, check out these great examples showing what can be built using Mapbox:\n
+    http://play.google.com/store/apps/details?id=com.mapbox.mapboxandroiddemo</string>
+    <string name="share_app_choose_one_instruction">Share the app:</string>
+
+    <!-- Clicked on layer activity -->
+    <string name="click_on_polygon_toast_instruction">Click anywhere within polygon FillLayer</string>
+    <string name="click_on_polygon_toast">Clicked on FillLayer</string>
+
+    <!-- Recyclerview on map -->
+    <string name="rv_card_name">Location #%1$d</string>
+    <string name="rv_card_bed_info">This location has %1$d beds</string>
+    <string name="toast_instruction">Tap on cards below</string>
+
+    <!-- Recyclerview Directions on map -->
+    <string name="rv_directions_route_card_name">Restaurant #%1$d</string>
+    <string name="rv_directions_route_available_table_info">%1$d tables available</string>
+
+    <!-- Optimization API activity -->
+    <string name="only_twelve_stops_allowed">Only 12 stops allowed on route. Press on the map and hold to clear markers.</string>
+    <string name="click_instructions">Tap on the map to select a maximum of 12 locations</string>
+    <string name="successful_but_no_routes">No routes found for that location</string>
+    <string name="null_in_response">%1$s is null.</string>
+    <string name="no_success">No routes found, make sure you set the right user and access token</string>
+
+    <!-- Rotation extrusion -->
+    <string name="no_accelerometer">This device doesn\'t support an accelerometer sensor</string>
+    <string name="no_magnetic">This device doesn\'t support a magnetic sensor</string>
+
+    <!-- GeoJSON plugin activity-->
+
+    <!-- Raster and local style source activity-->
+    <string name="load_raster_button_text">Load custom raster style</string>
+    <string name="load_local_style_button_text">Load local style</string>
+
+    <!-- Localization plugin -->
+    <string name="chinese">Chinese</string>
+    <string name="russian">Russian</string>
+    <string name="arabic">Arabic</string>
+    <string name="change_device_language_instruction">Change the device\'s language to German and then tap this button. Already in German? Try French</string>
+    <string name="instruction_description">Tap the buttons above to
+        switch the map\'s language.</string>
+
+    <!-- Matrix API -->
+    <string name="call_error">Oh no! The call to the Directions Matrix API failed</string>
+    <string name="miles_distance">%1$s miles</string>
+    <string name="click_on_marker_instruction_toast">Click on a bolt marker to get started</string>
+
+    <!-- Geocoding -->
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="geocode">Start geocode</string>
+    <string name="map_center">Map center</string>
+    <string name="no_results">No results</string>
+    <string name="choose_city_spinner">Choose city</string>
+    <string name="fill_in_a_value">Fill in a value</string>
+    <string name="geocoding_results">Raw geocoding results:</string>
+    <string name="make_valid_lat">Latitude must be between -90 and 90.
+    Longitude must be between -180 and 180.</string>
+
+    <!-- Infowindow SymbolLayer -->
+    <string name="capital">Capital: %1$s</string>
+    <string name="tap_on_marker_instruction">Tap on a marker</string>
+
+    <!-- Redo search -->
+    <string name="redo_search_button">Search in this area</string>
+    <string name="layer_not_found">The %1$s layer isn\'t part of this map style, so data might not appear</string>
+    <string name="move_the_map_and_research">Move the map and search again</string>
+
+    <!-- Place Picker plugin -->
+    <string name="selected_place_info">Selected location information:\n%1$s</string>
+    <string name="go_to_picker_activity">Go to place picker activity</string>
+
+    <!-- Static image -->
+    <string name="dark_style">Dark</string>
+    <string name="streets_style">Streets</string>
+    <string name="create_image">Create static image</string>
+    <string name="select_a_style">Select a style button first</string>
+
+    <!-- Building outline-->
+    <string name="building_layer_not_present">This map style doesn\'t have a building layer</string>
+    <string name="move_map_around_building_out_instruction">Move the map to place red dot on a building</string>
+    <string name="move_map_around_instruction">Move the map around</string>
+
+    <!--Calendar integration toast-->
+    <string name="user_calendar_permission_explanation">This example needs calendar access in order to show calendar and map integration.</string>
+    <string name="click_on_calendar_icon_instruction">Tap on a calendar event map icon</string>
+    <string name="no_connectivity">Calendar events won\'t appear because your device isn\'t connected to the internet.</string>
+
+    <!-- Temperature change -->
+    <string name="temp_change_feedback"> Showing min and max temperatures up to 2006 in %1$s</string>
+
+    <!-- Click to add image -->
+    <string name="tap_instructions">Tap four points on the map in a CLOCKWISE order</string>
+
+    <!-- Satellite land selection -->
+    <string name="clear_all">Clear</string>
+    <string name="trace_instruction">Trace some of the Gardens of Versailles</string>
+
+    <!-- Isochrone change -->
+    <string name="click_on_map_instruction">Tap on the map</string>
+    <string name="showing_time_labels_on_line_toast">Now showing minute labels on lines</string>
+
+    <!--Custom location layer plugin icon-->
+    <string name="current_location">Lat: %1$f Long: %2$f</string>
+    <string name="tracking_enabled">Tracking mode re-enabled</string>
+    <string name="tracking_already_enabled">Tracking already enabled. Move the map</string>
+
+    <!-- Tilequery API -->
+    <string name="api_response">Tilequery API response:</string>
+    <string name="api_error">Error with the request. Do you have internet access?</string>
+    <string name="no_tilequery_response_features_toast">No features found where you tapped. Find and tap on a building outline.</string>
+
+    <!-- Magic window -->
+    <string name="could_not_get_location">Couldn\'t retrieve the device\'s location</string>
+
+    <!-- Highlighted line -->
+    <string name="tap_on_line">Tap on one of the blue lines</string>
+
+    <!-- Building plugin -->
+    <string name="radial_coordinate">Light radial coordinate</string>
+    <string name="light_azimuth_angle">Light azimuthal angle</string>
+    <string name="light_polar_angle">Light polar angle</string>
+    <string name="building_opacity">Building opacity</string>
+
+    <!-- Rotating anchor position change-->
+    <string name="position_textview">\"State-label\" layer\'s anchor position: %1$s \n%2$s</string>
+
+    <!-- Rotating camera -->
+    <string name="rotating_camera_toast_instruction">Try tapping on the map and/or adjusting the zoom</string>
+
+    <!-- Zoom based icon change -->
+    <string name="zoom_map_in_and_out_icon_switch_instruction">Zoom in and out to see the icons change</string>
+
+    <!-- Pin drop animation -->
+    <string name="bounce_interpolator">Bounce interpolator</string>
+    <string name="linear_interpolator">Linear interpolator</string>
+    <string name="accelerate_interpolator">Accelerate interpolator</string>
+    <string name="decelerate_interpolator">Decelerate interpolator</string>
+
+    <!--TextFieldFormatting activity-->
+    <string name="instruction_toast">Use the buttons to adjust the ocean name text labels</string>
+    <string name="map_style_not_loaded_yet">The map\'s style hasn\'t loaded yet</string>
+    <string name="fab_toggle_font">Font</string>
+    <string name="fab_toggle_text_size">Size</string>
+    <string name="fab_toggle_text_color">Color</string>
+
+    <!-- Polygon toggle -->
+    <string name="tap_on_neighborhood">Tap on a neighborhood area to toggle its color</string>
+
+    <!-- Turf circle ring-->
+    <string name="tap_on_map">Tap on the map to move the ring</string>
+
+    <!-- Collision toggle -->
+    <string name="collision_enabled">true</string>
+    <string name="collision_disabled">false</string>
+    <string name="placement_explanation">textIgnorePlacement: other symbols can be visible even if \n they collide with the text</string>
+    <string name="overlap_explanation">textAllowOverlap: if true, the text will be visible even if it collides with other previously drawn symbols</string>
+    <string name="icon_overlap_explanation">iconAllowOverlap: the icon will be visible even if it collides with other previously drawn symbols</string>
+    <string name="icon_placement_explanation">iconIgnorePlacement: other symbols can be visible even if \n they collide with the icon</string>
+
+    <!-- Variable label placement-->
+    <string name="zoom_map_in_and_out_variable_label_instruction">Zoom in and out to see red labels try to avoid collisions</string>
+
+    <!-- Finger drag to draw -->
+    <string name="draw_instruction">Move your finger on the map to draw a search area</string>
+    <string name="toggle_search_data_points_title">Toggle searchable data</string>
+    <string name="search_result_size">Move map around to explore the %1$d locations in the drawn search area</string>
+    <string name="move_map_drawn_line">Move map around to explore your drawn line</string>
+    <string name="clear_map">Clear map for new draw</string>
+    <string name="toggle_straight_line_drawing">Toggle drawing single line only</string>
+    <string name="now_drawing">Now drawing %1$s</string>
+    <string name="single_line">single line</string>
+    <string name="polygon">polygon</string>
+
+    <!-- Scale bar plugin-->
+    <string name="zoom_map_fab_instruction">Zoom the map in and out. Click the button to change the scale bar styling.</string>
+
+    <!-- Symbol listener-->
+    <string name="clicked_symbol_toast">Symbol clicked</string>
+    <string name="long_clicked_symbol_toast">Symbol long clicked</string>
+    <string name="symbol_listener_instruction_toast">Tap, tap and hold, or tap and drag the icon</string>
+
+    <!-- LocationComponent camera options -->
+    <string name="normal">Normal</string>
+    <string name="compass">Compass</string>
+    <string name="gps">GPS</string>
+    <string name="none">None</string>
+    <string name="none_compass">None Compass</string>
+    <string name="none_gps">None GPS</string>
+    <string name="tracking">Tracking</string>
+    <string name="tracking_compass">Tracking Compass</string>
+    <string name="tracking_gps">Tracking GPS</string>
+    <string name="tracking_gps_north">Tracking GPS North</string>
+    <string name="clicked_on_location_component">Clicked on LocationComponent</string>
+
+    <!-- Isochrone with seekbar-->
+    <string name="live_within_textview">You want to live within how many minutes from your downtown Vienna office?</string>
+    <string name="minutes_textview">%1$d min</string>
+
+    <!-- Turf polygon circle transformation -->
+    <string name="polygon_circle_transformation_click_map_instruction">Tap the map to move the circle</string>
+    <string name="polygon_circle_transformation_circle_steps">Steps: %1$d</string>
+    <string name="polygon_circle_transformation_circle_radius">Radius: %1$s</string>
+    <string name="polygon_circle_transformation_circle_distance_units">Unit: </string>
+    <string-array name="polygon_circle_transformation_circle_distance_units_array">
+        <item>Kilometers</item>
+        <item>Miles</item>
+        <item>Degrees</item>
+        <item>Radians</item>
+    </string-array>
+
+    <!-- Cache management -->
+    <string name="cache_invalidated_toast_confirmation">Ambient cache successfully invalidated</string>
+    <string name="cache_invalidated_toast_error">Error with invalidating the ambient cache: %1$s</string>
+    <string name="reset_database_toast_confirmation">Database successfully reset</string>
+    <string name="reset_database_toast_error">Error with resetting database: %1$s</string>
+    <string name="set_max_ambient_cache_size_textview">Enter new max\ncache size in bytes</string>
+    <string name="set_max_ambient_cache_size_toast_confirmation">Max cache size successfully set to %1$d bytes</string>
+    <string name="set_max_ambient_cache_size_toast_error">Error with setting new max cache size: %1$s</string>
+    <string name="clear_ambient_cache_size_toast_confirmation">Ambient cache successfully cleared</string>
+    <string name="clear_ambient_cache_size_toast_error">Error with clearing ambient cache: %1$s</string>
+    <string name="invalidate_cache_button">Invalidate cache</string>
+    <string name="reset_database_button">Reset database</string>
+    <string name="set_ambient_cache_max_hint">New max</string>
+    <string name="set_ambient_cache_max">Set ambient\nmax cache</string>
+    <string name="invalid_max_ambient_cache_size">Set ambient\nmax cache</string>
+    <string name="clear_ambient_cache_button">Clear ambient\ncache</string>
+
+    <!-- Turf measure line distance -->
+    <string name="line_distance_tap_instruction">Tap on map at least twice to create and measure a line</string>
+    <string name="line_distance_textview">Line distance in %1$s: %2$s</string>
+
+    <!-- Directions route gradient -->
+    <string name="route_can_not_be_displayed">The directions route can\'t be displayed at this time</string>
+    <string name="route_call_failure">Directions API call failed. Try again later.</string>
+    <string name="tap_map_instruction_gradient_directions">Tap the map to change the route destination.</string>
+
+    <!-- Multiple geometries directions line-->
+    <string name="no_legs_toast">This directions route has no legs</string>
+    <string name="no_routes_found">No routes found</string>
+    <string name="response_body_null">Response body null. Try again later.</string>
+    <string name="tap_on_map_to_change_destination">Tap on map to change destination</string>
+
+    <!-- Tilequery API -->
+    <string name="elevation_api_response_textview">Elevation data response from Tilequery API</string>
+    <string name="elevation_api_response_ten_meter_textview">Data is mapped to 10 meter height increments</string>
+    <string name="elevation_tilequery_api_response_error">Error with the request. Do you have internet access?</string>
+    <string name="elevation_tilequery_no_features">No features in the response.</string>
+    <string name="elevation_numbers_only_textview">%1$d Features in the API response: %2$s</string>
+
+    <!-- Shared preferences save -->
+    <string name="not_saved_yet">Not saved yet</string>
+    <string name="saved_lat_textview">Saved latitude: %1$s</string>
+    <string name="saved_long_textview">Saved longitude: %1$s</string>
+    <string name="tap_on_map_save_to_shared_pref">Tap on the map to save coordinates to the device\'s Shared Preferences</string>
+    <string name="shared_pref_marker_placement">Marker placed at coordinates saved in Shared Preferences.</string>
+
+    <!-- Variable label placement-->
+    <string name="zoom_map_in_and_out_circle_to_icon_transition">Zoom in and out to see the circles transition to icons</string>
+
+    <!-- Zoom opacity swap-->
+    <string name="zoom_in_and_out_instruction">Zoom in and out to see the new order of the satellite and Streets styles</string>
+
+    <!-- China bounds checker-->
+    <string name="device_location">Device %1$s in China</string>
+    <string name="china_style_with_english_labels_warning_toast">This style file isn\'t actually included in the app because of privacy reasons. Add the file to an assets folder. Please email Mapbox at apac-bd@mapbox.com if you need this file and/or have questions.</string>
+
+    <!-- China mixed styles based on location-->
+    <string name="china_token_warning_toast">This example requires a regular Mapbox token and a China token. Please see the code for more instructions.</string>
+
+    <!-- Biometrics fingerprint-->
+    <string name="prompt_title">Unlock map data</string>
+    <string name="prompt_subtitle">Show hidden data</string>
+    <string name="prompt_description">Touch your finger on the fingerprint sensor to add data to the map.</string>
+    <string name="prompt_negative_button">Cancel</string>
+    <string name="fingerprint_not_possible">Fingerprint authentication not set up on this device or not available yet.</string>
+    <string name="fingerprint_fail">Didn\'t recognize your fingerprint. Please try again!</string>
+
+    <!-- Thick bordered circle-->
+    <string name="thick_bordered_circle_radius">Radius: %1$d kilometers</string>
+    <string name="thick_bordered_circle_border_difference">Border difference: %1$d kilometers</string>
+    <string name="tap_on_map_to_move_bordered_circle">Tap on the map to move the bordered circle</string>
+
+    <!-- Worldview-->
+    <string name="now_viewing_worldview">Now viewing the "%1$s" world view</string>
+
+    <!-- Property icon setting-->
+    <string name="toast_icon_property_info">This Feature\'s icon id is %1$s</string>
+
+    <!-- Static image API notification-->
+    <string name="static_image_api_notification_content_title">%1$d wifi hotspots within %2$d ft.</string>
+    <string name="static_image_api_notification_bitmap_fail">Failed to retrieve an image from the Static Image API</string>
+    <string name="static_image_api_notification_description">Here\'s the closest one: %1$s</string>
+    <string name="static_image_api_notification_seekbar_feet">%1$d feet</string>
+    <string name="static_image_api_notification_no_wifi_nearby">Zero wifi locations nearby</string>
+
+    <!-- Zoom to cluster leaves -->
+    <string name="tap_on_cluster_circle_instruction">Tap on a cluster circle to zoom and fit the bounds to its leaves</string>
+
+    <!-- Driving profile toggle -->
+    <string name="driving_profile">%1$sm\nby car</string>
+    <string name="walking_profile">%1$sm\non foot</string>
+    <string name="cycling_profile">%1$sm\nby bike</string>
+    <string name="instruction">Click on map or buttons to change route</string>
+
+    <!-- Baseball spray chart-->
+    <string name="baseball_spray_chart_show_icons">Show icons instead</string>
+
+    <!-- Circle icon toggling on click-->
+    <string name="tap_on_map_to_toggle_instruction">Tap on a circle and then marker to toggle. Tap elsewhere to reset to circles.</string>
+
+    <!-- Vibrate-->
+    <string name="long_press_to_add_pin">Long press on the map to add a pin icon</string>
+
+    <!-- Within circle filter-->
+    <string-array name="within_poi_filter_circle_distance_units_array">
+        <item>Miles</item>
+        <item>Kilometers</item>
+    </string-array>
+
+    <!-- Two-person meetup location isochrone within  -->
+    <string name="drag_faces_instruction">Tap on, hold, and drag a face to move it to a new location</string>
+
+    <!-- Custom LocationComponent pulsing  -->
+    <string name="duration">Duration:</string>
+    <string name="color">Color:</string>
+    <string name="select">Select</string>
+
+    <!-- Feature filter  -->
+    <string name="showing_all_country_labels">Showing all country labels</string>
+    <string name="filtering_countries">Match filter using "name_en", applied to layer to hide some countries\' labels</string>
+
+    <!-- Single building highlight  -->
+    <string name="tap_on_building">Tap on a building to get started</string>
+    <string name="keep_tapping_on_building_footprint">Keep tapping on any building footprints!</string>
+
+    <!-- Extrusion color expression highlight -->
+    <string name="tap_on_building_to_highlight">Tap on a building to highlight it</string>
 </resources>
