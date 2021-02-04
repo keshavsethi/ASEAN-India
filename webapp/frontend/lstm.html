@@ -1,0 +1,104 @@
+<html>
+    <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css'><link rel="stylesheet" href="./style.css">
+<style>
+.margin_reduce{
+margin:0 !important;
+padding:0 !important;
+}
+.headings {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.hr {
+  display: block;
+  flex: 1;
+  margin: 0 30px;
+  height: 3px;
+  background: #D4D4D4;
+}
+</style>
+  </head>
+  <body class="margin_reduce">
+<div class="container">
+<div class="alert alert-warning alert-dismissible mt-5" role="alert">
+  <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+  <strong>Welcome User,</strong> Please select mmsi of vessel and run model in real time for that vessel!!<strong>Please scroll dowm to see list of anomalies</strong>
+</div>
+    <div class="headings">
+<a href="dashboard.html" class="float-left btn btn-primary m-3 btn-md">Back</a>
+      <h2 class="title  text-primary" id="name_vessel">Select Vessel</h2>
+      <span class="hr"></span>
+      <a href="#" class="btn btn-primary btn-lg">Download Report</a>
+  </div>
+<div class="container mb-5">
+<div class="float-left">
+  <input type="checkbox"  placeholder=" dddfd"class="m-5" aria-label="Checkbox for following text input" id="accept1">
+  <label class="my-1 mr-2 text-primary " for="inlineFormCustomSelectPref"><b>Speed</b></label>
+  <input type="range" min="1" max="18"  class="slider m-0" id="myRange1">
+  <input type="checkbox"  class="m-4" aria-label="Checkbox for following text input" id="accept2">
+  <label class="my-1 mr-2 text-primary" for="inlineFormCustomSelectPref"><b>Course</b></label>
+  <input type="range" min="40" max="400"  class="slider m-0" id="myRange2">
+  <input type="checkbox"  class="m-5" aria-label="Checkbox for following text input" id="accept3">
+  <label class="my-1 mr-2 text-primary" for="inlineFormCustomSelectPref"><b>Rot</b></label>
+  <input type="range" min="-100" max="10" class="slider m-0" id="myRange3">
+</div>
+<div class="float-right">
+	<p class="text-danger m-4 pt-3" id="temp"></p>
+</div>
+</div>
+<br>
+<form class="form-inline float-left ml-5">
+  <label class="my-1 mr-2 text-primary" ><b>MMSI of Vessel</b></label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="mmsi">
+  <a id="button_mmsi" class="btn btn-primary mb-2">Submit</a>
+</form>
+<br><br>
+<div class="container mt-5">
+    <div id="graph1"></div>  
+    <div id="graph2"></div>  
+    <div id="graph3"></div>  
+    <div id="graph4"></div>  
+</div>  
+<div class="container p-5">
+<hr> <br>
+    <div class="headings">
+      <h2 class="title text-primary">Anomalies Detected</h2>
+      <span class="hr"></span>
+      <a href="#" class="btn btn-primary btn-lg">Broadcast</a>
+    </div><br>
+    <table id="addrows" class="table table-striped table-bordered" style="width:100%">
+        <caption class="text-center">Anomalies based on LSTM and realtime prediction</caption>
+        <thead>
+            <tr>
+                <th>Time stamp</th>
+                <th>Speed</th>
+                <th>Course</th>
+                <th>Rot</th>
+                <th>Deviation</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+ <script src="./LSTM/LSTM/index.js"></script>
+
+  </body>
+  </html>
+  
