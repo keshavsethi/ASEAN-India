@@ -42,8 +42,10 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
     implementation 'com.google.firebase:firebase-messaging:20.1.0'
     implementation 'com.google.firebase:firebase-database:19.2.1'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -54,4 +56,19 @@ dependencies {
 
     // material
     implementation "com.google.android.material:material:1.1.0-beta02"
+
+    // circle image
+    implementation "de.hdodenhof:circleimageview:3.0.0"
+
+    //firebase
+    implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+
+    // GSON
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Map Box Lib
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.5.0'
+
+    // icon
+    // <a href='https://www.freepik.com/vectors/technology'>Technology vector created by macrovector - www.freepik.com</a>
 }

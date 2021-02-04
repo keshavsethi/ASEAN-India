@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#e26d5c</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#1baea9</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +10,32 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorOrange">#edae49</color>
+    <color name="colorGrey">#d8d8d8</color>
+    <color name="colorUglyBlue">#30638e</color>
+    <color name="colorText">#4a4a4a</color>
+    <color name="colorButterScotch">#edae49</color>
+    <color name="colorBuleTealish">#25a9b4</color>
+    <color name="colorBrownGrey">#9c9c9c</color>
+    <color name="colorPurpleDeepLilac">#8f77c3</color>
+    <color name="colorPurpley">#6d5ce2</color>
+    <color name="bitter_grey">#4a4a4a</color>
+    <color name="blue">#0083d0</color>
+    <color name="chuck_status_500">#B71C1C</color>
+    <color name="colorMusk">#eeeeee</color>
+    <color name="colorAsh">#d1d1d1</color>
+    <color name="colorFabCall">#0083d0</color>
+    <color name="colorBgPoint">#eaf5f4</color>
+    <color name="colorMilkyWhite">#fbfbfa</color>
+    <color name="colorDisableCall">#cbcbcb</color>
+    <color name="colorEnableCall">#bdcc2b</color>
+    <color name="colorSourSweet">#ff5b5b</color>
+    <color name="colorGrossGreen">#afbf14</color>
+    <color name="colorRbGrey">#ededed</color>
+    <color name="colorPaleTurquoise">#bae3e2</color>
+    <color name="colorTextElephant">#787878</color>
+    <color name="colorIvory">#f3f3f3</color>
+    <color name="fab_background">#FFF</color>
+    <color name="colorLightGrey1">#f6f6f6</color>
+    <color name="colorLightGrey2">#d3d3d3</color>
 </resources>
